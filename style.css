@@ -141,10 +141,31 @@ body .section1 .rightSide form .man, body .section1 .rightSide form .woman {
 }
 
 body .section1 .rightSide form .radio {
+  display: none;
+}
+
+body .section1 .rightSide form .radio + label:before {
+  content: "";
   width: 10px;
+  height: 10px;
+  border-radius: 7px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  vertical-align: middle;
+}
+
+body .section1 .rightSide form .radio:checked + label:before {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid gray;
 }
 
 body .section1 .rightSide .buttonSubmit {
+  margin-top: 10px;
   background-color: white;
   width: 100%;
   height: 30px;

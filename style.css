@@ -175,4 +175,108 @@ body .section1 .rightSide .buttonSubmit {
   font-size: 12px;
   cursor: pointer;
 }
+
+body .separator {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 0;
+}
+
+body .separator span {
+  color: #6e6d6d;
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+body .separator hr {
+  width: 37%;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: inset;
+  border-left-style: hidden;
+  border-bottom-color: #6e6d6d;
+}
+
+body .section2 {
+  width: 50%;
+  height: 700px;
+}
+
+body .section2 .productList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+}
+
+body .section2 .productList .product {
+  width: 100px;
+  margin: 10px;
+}
+
+body .section2 .productList .product .productImage {
+  width: 100px;
+  height: 90px;
+  color: red;
+}
+
+body .section2 .productList .product .productName {
+  font-size: 10px;
+  margin: 5px 0;
+}
+
+body .section2 .productList .product .productDescription {
+  font-size: 10px;
+  margin: 5px 0;
+}
+
+body .section2 .productList .product .productOldValue {
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+body .section2 .productList .product .productCurrentValue {
+  margin: 5px 0;
+}
+
+body .section2 .productList .product .productPaymentOption {
+  font-size: 10px;
+  margin: 5px 0;
+}
+
+body .section2 .divButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+body .section2 .divButton .evenMoreProducts {
+  background-color: white;
+  border: 1px solid darkgrey;
+  height: 35px;
+  padding: 0 30px;
+  border-radius: 3px;
+  font-size: 10px;
+  cursor: pointer;
+  color: #adadad;
+}
 /*# sourceMappingURL=style.css.map */

@@ -279,4 +279,96 @@ body .section2 .divButton .evenMoreProducts {
   cursor: pointer;
   color: #adadad;
 }
+
+body .section3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .section3 .phrase {
+  font-size: 10px;
+  margin: 30px 0 30px 0;
+}
+
+body .section3 .friendForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .section3 .friendForm .leftSide, body .section3 .friendForm .rightSide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+
+body .section3 .friendForm label {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+body .section3 .friendForm input {
+  margin-bottom: 15px;
+}
+
+body .section3 .sendFriendInfo {
+  margin-top: 10px;
+  background-color: white;
+  width: 50%;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #979797;
+  color: #adadad;
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+body footer {
+  width: 100%;
+  height: 300px;
+  background-color: #6e6d6d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+body footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+body footer div span {
+  color: white;
+  font-size: 10px;
+}
 /*# sourceMappingURL=style.css.map */

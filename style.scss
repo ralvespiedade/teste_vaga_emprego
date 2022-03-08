@@ -1,3 +1,8 @@
+:root {
+    --primaryColor: rgb(110, 109, 109);
+    --secondaryColor: rgb(126, 126, 126);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,40 +17,43 @@ body {
         
         width: 100%;
         color: white;
-        background-color: rgb(110, 109, 109);
+        background-color: var(--primaryColor);
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 300px;
+        height: 400px;
         position: relative;
         
         .firstLine {
-            margin-top: 50px;
+            margin-top: 70px;
             font-weight: 250;
-            font-size: 14px;
+            font-size: 20px;
+            color:rgb(223, 222, 222);
         }
         .secondLine {
-            font-size: 27px;
+            font-size: 43px;
 
         }
         .thirdLine {
-            font-size: 10px;
-            margin: 30px 0 30px 0;
-            
+            font-size: 16px;
+            margin: 25px 0 30px 0;
+            color:rgb(223, 222, 222);
         }
         .buttonList {
             list-style: none;
             display: flex;
+            margin-top: 25px;
             .button {
-                height: 27px;
-                width: 115px;
+                height: 44px;
+                width: 175px;
                 background-color: white;
-                color: rgb(173, 173, 173);
-                font-size: 10px;
+                color: var(--secondaryColor);
+                font-size: 15px;
                 border-radius: 3px;
                 border: 1px solid whitesmoke;
-                margin: 0 15px 0 15px;
+                margin: 0 25px 0 25px;
                 box-shadow: 0px 2px 2px rgb(112, 112, 112);
+                cursor: pointer;
             }
         }
     }
@@ -54,9 +62,9 @@ body {
         width: 100%;
         height: 120px;
         background-color: white;
-        transform: rotate(5deg) skewX(5.5deg) scaleX(1.005) scaleY(1.2);
+        transform: rotate(3deg) skewX(5.5deg) scaleX(1.005) scaleY(1.2);
         position: absolute;
-        top: 240px;
+        top: 350px;
         
     }
 
@@ -71,31 +79,35 @@ body {
         
         
         .leftSide {
-            width: 65%;
+            width: 60%;
             padding-right: 20px;
             .title {
                 margin-bottom: 15px;
                 font-weight: 250;
-                font-size: 14px;
+                font-size: 20px;
+                color: var(--secondaryColor)
             }
             p {
-                font-size: 10px;
+                font-size: 14px;
                 margin-bottom: 10px;
             }
         }
         .rightSide {
-            width: 35%;
+            width: 40%;
             padding-left: 20px;
             form {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 label {
-                    font-size: 10px;
-                    margin-bottom: 5px;;
+                    color: var(--primaryColor);
+                    font-size: 14px;
+                    margin-bottom: 5px;
                 }
                 input {
                     margin-bottom: 15px;
+                    height: 30px;
+                    border: 2px solid var(--secondaryColor);
                 }
                 .man, .woman {
                     margin-right: 20px;
@@ -124,15 +136,16 @@ body {
                 }
             }
             .buttonSubmit {
-                margin-top: 10px;
                 background-color: white;
+                border: 2px solid var(--primaryColor);
                 width: 100%;
-                height: 30px;
-                border-radius: 3px;
-                border: 1px solid rgb(151, 151, 151);
-                color: rgb(173, 173, 173);
-                font-size: 12px;
+                height: 40px;
+                padding: 0 30px;
+                margin-top: 15px;
+                border-radius: 6px;
+                font-size: 17px;
                 cursor: pointer;
+                color:var(--secondaryColor)
             }
         }
     }
@@ -145,57 +158,77 @@ body {
         margin: 40px 0;
         span {
             color: rgb(110, 109, 109);
-            font-size: 11px;
+            font-size: 20px;
             font-weight: bold;
-            margin: 0 5px;
+            
         }
         hr {
            
         width: 37%;
-        
         border-top-style: hidden;
         border-right-style: hidden;
         border-bottom-style: inset;
         border-left-style: hidden;
-        border-bottom-color: rgb(110, 109, 109);
-
+        border-bottom-color: var(--primaryColor);
+        
         }
 
 
     }
-    .section2 {
+    .section2 { 
         width: 50%;
-        height: 700px;
+        height: 1000px;
         .productList {
             display: flex;
             flex-wrap: wrap;
             list-style: none;
+            justify-content: space-around;
             .product {
-                width: 100px;
+                width: 200px;
                 margin: 10px;
                 .productImage {
-                    width: 100px;
-                    height: 90px;
-                    color: red;
+                    width: 200px;
+                    height: 160px;
+                    
                 }
                 .productName {
-                    font-size: 10px;
-                    margin: 5px 0;
+                    font-size: 15px;
+                    color: var(--secondaryColor);
+                    margin: 10px 0;
                 }
                 .productDescription {
-                    font-size: 10px;
-                    margin: 5px 0;
+                    font-size: 13px;
+                    color: var(--secondaryColor);
+                    margin: 10px 0;
                 }
                 .productOldValue {
                     font-size: 13px;
-                    margin: 5px 0;
+                    color: var(--secondaryColor);
+                    margin: 10px 0;
                 }
                 .productCurrentValue {
                     margin: 5px 0;
+                    color: var(--secondaryColor);
+                    font-weight: bold;
+                    font-size: 20px;
                 }
                 .productPaymentOption {
-                    font-size: 10px;
+                    font-size: 12px;
                     margin: 5px 0;
+                    color: var(--secondaryColor);
+                }
+                .buyProductButton {
+                    background-color: white;
+                    border: 1px solid var(--primaryColor);
+                    width: 100%;
+                    height: 33px;
+                    padding: 0 30px;
+                    margin-top: 15px;
+                    border: 2px solid var(--secondaryColor);
+                    border-radius: 4px;
+                    font-size: 17px;
+                    cursor: pointer;
+                    color:var(--secondaryColor)
                 }
             }
         }
@@ -205,13 +238,13 @@ body {
             margin: 20px 0;
             .evenMoreProducts {
                 background-color: white;
-                border: 1px solid darkgrey;
+                border: 1px solid var(--primaryColor);
                 height: 35px;
                 padding: 0 30px;
                 border-radius: 3px;
-                font-size: 10px;
+                font-size: 17px;
                 cursor: pointer;
-                color:rgb(173, 173, 173)
+                color:rgb(126, 126, 126)
             }
         }
     }
@@ -220,8 +253,9 @@ body {
         flex-direction: column;
         align-items: center;
         .phrase {
-            font-size: 10px;
-            margin: 30px 0 30px 0;     
+            font-size: 16px;
+            margin: 0 0 30px 0;     
+            color: var(--secondaryColor);
         }
         .friendForm {
             display: flex;
@@ -231,42 +265,60 @@ body {
                 margin: 10px;
             }
             label {
-                font-size: 10px;
+                font-size: 14px;
                 margin-bottom: 5px;;
+                color: var(--secondaryColor);
             }
             input {
+                width: 400px;
+                height: 30px;
                 margin-bottom: 15px;
+                border: 2px solid var(--secondaryColor)
             }
         }
         .sendFriendInfo {
             margin-top: 10px;
             background-color: white;
-            width: 50%;
-            height: 30px;
-            border-radius: 3px;
-            border: 1px solid rgb(151, 151, 151);
-            color: rgb(173, 173, 173);
-            font-size: 12px;
+            width: 280px;
+            height: 45px;
+            border-radius: 5px;
+            border: 2px solid var(--secondaryColor);
+            color: var(--secondaryColor);
+            font-size: 16px;
             cursor: pointer;
             margin-bottom: 100px;
         }
     }
+    
+    .triangle2 {
+        
+        width: 100%;
+        height: 130px;
+        background-color: white;
+        transform: rotate(-3deg) skewX(-4.9deg) scaleX(1.005) scaleY(1.2);
+        position: absolute;
+        bottom: -800px;
+        
+    }
+    
     footer {
         width: 100%;
         height: 300px;
-        background-color: rgb(110, 109, 109);
+        background-color: var(--primaryColor);
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         div {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px;
+            margin: 70px 0 0 0;
             
             span {
-                color: white;
-                font-size: 10px;
+                margin: 4px 0;
+                color: whitesmoke;
+                font-size: 13px;
+
             }
         }
     }

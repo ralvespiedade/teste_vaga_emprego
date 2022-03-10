@@ -1,8 +1,9 @@
 :root {
   --firstColor: #FFFF;
-  --secondColor: #707070;
-  --thirdColor: #888888;
+  --secondColor: #686868;
+  --thirdColor: #999999;
   --fourthColor: #00000029;
+  --darkWhieSmoke: rgb(230, 230, 230);
 }
 
 * {
@@ -22,6 +23,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  letter-spacing: 0;
 }
 
 body .header {
@@ -38,26 +40,26 @@ body .header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 400px;
+  height: 500px;
   position: relative;
 }
 
 body .header .firstLine {
-  margin-top: 69px;
+  margin-top: 72px;
   font-weight: 250;
   font-size: 23px;
-  color: var(--firstColor);
+  color: var(--darkWhieSmoke);
 }
 
 body .header .secondLine {
-  margin-top: 5px;
-  font-size: 40px;
+  margin-top: 4px;
+  font-size: 45px;
 }
 
 body .header .thirdLine {
   font-size: 16px;
-  margin: 25px 0 30px 0;
-  color: var(--firstColor);
+  margin: 30px 0 30px 0;
+  color: var(--darkWhieSmoke);
 }
 
 body .header .buttonList {
@@ -82,19 +84,19 @@ body .header .buttonList .button {
   cursor: pointer;
 }
 
-body .triangle {
+body .header .triangle {
   width: 100%;
-  height: 120px;
-  background-color: white;
-  -webkit-transform: rotate(3deg) skewX(5.5deg) scaleX(1.005) scaleY(1.2);
-          transform: rotate(3deg) skewX(5.5deg) scaleX(1.005) scaleY(1.2);
+  height: 300px;
+  background-color: var(--firstColor);
+  -webkit-transform: rotate(4deg) skewX(3.6deg) scaleX(1.003);
+          transform: rotate(4deg) skewX(3.6deg) scaleX(1.003);
   position: absolute;
-  top: 355px;
+  top: 366px;
 }
 
 body .section1 {
   color: #adadad;
-  width: 50%;
+  width: 1000px;
   position: relative;
   z-index: 1;
   display: -webkit-box;
@@ -111,7 +113,7 @@ body .section1 .leftSide {
 }
 
 body .section1 .leftSide .title {
-  margin-bottom: 15px;
+  margin-bottom: 32px;
   font-weight: 250;
   font-size: 23px;
   color: var(--thirdColor);
@@ -119,7 +121,8 @@ body .section1 .leftSide .title {
 
 body .section1 .leftSide p {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 26px;
+  color: var(--thirdColor);
 }
 
 body .section1 .rightSide {
@@ -141,15 +144,16 @@ body .section1 .rightSide form {
 }
 
 body .section1 .rightSide form label {
-  color: var(--primaryColor);
+  color: var(--thirdColor);
   font-size: 14px;
   margin-bottom: 5px;
 }
 
 body .section1 .rightSide form input {
   margin-bottom: 15px;
+  width: 340px;
   height: 30px;
-  border: 2px solid var(--secondaryColor);
+  border: 1px solid var(--secondColor);
 }
 
 body .section1 .rightSide form .man, body .section1 .rightSide form .woman {
@@ -162,9 +166,9 @@ body .section1 .rightSide form .radio {
 
 body .section1 .rightSide form .radio + label:before {
   content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 8px;
   background-color: white;
   border: 1px solid gray;
   display: inline-block;
@@ -177,58 +181,48 @@ body .section1 .rightSide form .radio:checked + label:before {
   background-color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 5px solid gray;
+  border: 6px solid var(--secondColor);
 }
 
 body .section1 .rightSide .buttonSubmit {
-  background-color: white;
-  border: 2px solid var(--primaryColor);
-  width: 100%;
-  height: 40px;
+  background-color: var(--firstColor);
+  border: 1px solid var(--secondColor);
+  width: 340px;
+  height: 39px;
   padding: 0 30px;
   margin-top: 15px;
-  border-radius: 6px;
-  font-size: 17px;
+  border-radius: 4px;
+  font-size: 18px;
   cursor: pointer;
-  color: var(--secondaryColor);
-}
-
-body .separator {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 40px 0;
-}
-
-body .separator span {
-  color: #6e6d6d;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-body .separator hr {
-  width: 37%;
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-bottom-style: inset;
-  border-left-style: hidden;
-  border-bottom-color: var(--primaryColor);
+  color: var(--thirdColor);
 }
 
 body .section2 {
-  width: 50%;
+  border-top: 2px solid var(--thirdColor);
+  margin-top: 95px;
+  padding-top: 55px;
+  width: 1000px;
   height: 1000px;
+}
+
+body .section2 .separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .section2 .separator span {
+  color: var(--thirdColor);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  letter-spacing: -0.5px;
+  margin-top: -70px;
+  position: absolute;
+  padding: 3.5px 20px 0 20px;
 }
 
 body .section2 .productList {
@@ -243,58 +237,57 @@ body .section2 .productList {
 }
 
 body .section2 .productList .product {
-  width: 200px;
+  width: 220px;
   margin: 10px;
 }
 
 body .section2 .productList .product .productImage {
-  width: 200px;
-  height: 160px;
+  width: 220px;
+  height: 170px;
 }
 
 body .section2 .productList .product .productName {
-  font-size: 15px;
-  color: var(--secondaryColor);
+  font-size: 16px;
+  color: var(--thirdColor);
   margin: 10px 0;
 }
 
 body .section2 .productList .product .productDescription {
-  font-size: 13px;
-  color: var(--secondaryColor);
+  font-size: 14px;
+  color: var(--thirdColor);
   margin: 10px 0;
 }
 
 body .section2 .productList .product .productOldValue {
-  font-size: 13px;
-  color: var(--secondaryColor);
+  font-size: 14px;
+  color: var(--thirdColor);
   margin: 10px 0;
 }
 
 body .section2 .productList .product .productCurrentValue {
   margin: 5px 0;
-  color: var(--secondaryColor);
+  color: var(--secondColor);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 body .section2 .productList .product .productPaymentOption {
-  font-size: 12px;
+  font-size: 14px;
   margin: 5px 0;
-  color: var(--secondaryColor);
+  color: var(--thirdColor);
 }
 
 body .section2 .productList .product .buyProductButton {
-  background-color: white;
-  border: 1px solid var(--primaryColor);
+  background-color: var(--firstColor);
+  border: 2px solid var(--thirdColor);
   width: 100%;
   height: 33px;
   padding: 0 30px;
   margin-top: 15px;
-  border: 2px solid var(--secondaryColor);
   border-radius: 4px;
-  font-size: 17px;
+  font-size: 18px;
+  color: var(--thirdColor);
   cursor: pointer;
-  color: var(--secondaryColor);
 }
 
 body .section2 .divButton {
@@ -304,21 +297,26 @@ body .section2 .divButton {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 body .section2 .divButton .evenMoreProducts {
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
-  border: 1px solid var(--primaryColor);
-  height: 35px;
-  padding: 0 30px;
-  border-radius: 3px;
+  border: 2px solid var(--thirdColor);
+  height: 44px;
+  padding: 0 37px;
+  border-radius: 4px;
   font-size: 17px;
+  color: var(--thirdColor);
   cursor: pointer;
-  color: #7e7e7e;
 }
 
 body .section3 {
+  width: 1000px;
+  border-top: 2px solid var(--thirdColor);
+  margin-top: 95px;
+  padding-top: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,12 +327,33 @@ body .section3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 3;
+}
+
+body .section3 .separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .section3 .separator span {
+  color: var(--thirdColor);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  letter-spacing: -0.5px;
+  margin-top: -70px;
+  position: absolute;
+  padding: 3.5px 20px 0 20px;
 }
 
 body .section3 .phrase {
-  font-size: 16px;
+  font-size: 15px;
   margin: 0 0 30px 0;
-  color: var(--secondaryColor);
+  color: var(--thirdColor);
 }
 
 body .section3 .friendForm {
@@ -351,49 +370,40 @@ body .section3 .friendForm .leftSide, body .section3 .friendForm .rightSide {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  margin: 22px;
 }
 
 body .section3 .friendForm label {
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 5px;
-  color: var(--secondaryColor);
+  color: var(--thirdColor);
 }
 
 body .section3 .friendForm input {
-  width: 400px;
+  width: 390px;
   height: 30px;
   margin-bottom: 15px;
-  border: 2px solid var(--secondaryColor);
+  border: 2px solid var(--thirdColor);
 }
 
 body .section3 .sendFriendInfo {
   margin-top: 10px;
   background-color: white;
-  width: 280px;
-  height: 45px;
+  width: 300px;
+  height: 42px;
   border-radius: 5px;
-  border: 2px solid var(--secondaryColor);
-  color: var(--secondaryColor);
-  font-size: 16px;
+  border: 2px solid var(--thirdColor);
+  color: var(--thirdColor);
+  font-size: 18px;
+  letter-spacing: 0;
   cursor: pointer;
-  margin-bottom: 100px;
-}
-
-body .triangle2 {
-  width: 100%;
-  height: 130px;
-  background-color: white;
-  -webkit-transform: rotate(-3deg) skewX(-4.9deg) scaleX(1.005) scaleY(1.2);
-          transform: rotate(-3deg) skewX(-4.9deg) scaleX(1.005) scaleY(1.2);
-  position: absolute;
-  bottom: -800px;
+  margin-bottom: 50px;
 }
 
 body footer {
   width: 100%;
-  height: 300px;
-  background-color: var(--primaryColor);
+  height: 350px;
+  background-color: var(--secondColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,6 +414,18 @@ body footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+body footer .triangle2 {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  -webkit-transform: rotate(-4deg) skewX(-3.6deg) scaleX(1.003);
+          transform: rotate(-4deg) skewX(-3.6deg) scaleX(1.003);
+  z-index: 2;
+  position: absolute;
+  bottom: 265px;
 }
 
 body footer div {
@@ -422,7 +444,7 @@ body footer div {
 
 body footer div span {
   margin: 4px 0;
-  color: whitesmoke;
+  color: var(--darkWhieSmoke);
   font-size: 13px;
 }
 /*# sourceMappingURL=style.css.map */

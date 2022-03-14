@@ -147,6 +147,10 @@ body .section1 .rightSide form label {
   color: var(--thirdColor);
   font-size: 14px;
   margin-bottom: 5px;
+  -webkit-transition-duration: 3000ms;
+          transition-duration: 3000ms;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 
 body .section1 .rightSide form input {
@@ -154,6 +158,22 @@ body .section1 .rightSide form input {
   width: 340px;
   height: 30px;
   border: 1px solid var(--secondColor);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+body .section1 .rightSide form .correctValidation {
+  color: green;
+  font-weight: bold;
+}
+
+body .section1 .rightSide form .errorLabel {
+  color: #b13b3b;
+}
+
+body .section1 .rightSide form .errorInput {
+  border: 3px solid red;
+  color: red;
 }
 
 body .section1 .rightSide form .man, body .section1 .rightSide form .woman {

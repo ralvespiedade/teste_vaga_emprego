@@ -28,8 +28,11 @@ var regForm = document.querySelector("#form")
 var labelName = document.querySelector("#labelName")
 var regName = document.querySelector("#name")
 var regEmail = document.querySelector("#email")
+const labelCpf = document.querySelector("#labelCpf")
+const regCpf = document.querySelector("#cpf")
 const regButton = document.querySelector("#buttonSubmit")
-
+const regGender = document.querySelectorAll('input.radio')
+const boxCheck = document.querySelector('.box_check')
 
 // essa variavel recebe esse método que torna-se um objeto de abrir uma conexão com um determinado servidor.
 const xhttp = new XMLHttpRequest()
@@ -50,6 +53,37 @@ xhttp.send()
 
 regButton.onclick = function() {
   
+}
+
+regName.onblur = function() {
+    nameVerification(regName.value)
+    
+}
+regEmail.onblur = function() {
+    emailVerification(regEmail.value)
+}
+
+regCpf.onblur = function() {
+    cpfVerification(regCpf.value)
+}
+
+regGender.onclick = function() {
+    genderVerification()
+}
+
+function errorFound(input_element, label_element, message) {
+
+    input_element.classList.add('errorInput')
+    label_element.classList.add('errorLabel')
+    label_element.innerText = message
+
+}
+
+function errorCorrected(input_element, label_element, message) {
+    input_element.classList.remove('errorInput')
+    label_element.classList.remove('errorLabel')
+    label_element.innerText = message
+    label_element.classList.add('correctValidation')
 }
 
 
@@ -76,27 +110,15 @@ function nameVerification(name) {
     
     if (!nameValidation) {
         //add HTMLclass changing form style
-        regName.classList.add('errorInput')
-        labelName.classList.add('errorLabel')
-        labelName.innerHTML = "Erro: o nome não pode conter números ou caracteres especiais."
+        errorFound(regName, labelName, "Erro: o nome não pode conter números ou caracteres especiais.")
+        
     } else if (name === "") { 
-        regName.classList.add('errorInput')
-        labelName.classList.add('errorLabel')
-        labelName.innerText = "Erro: nome é um campo obrigatório."
+        errorFound(regName, labelName, "Erro: nome é um campo obrigatório.")
+        
     } else {
-        regName.classList.remove('errorInput')
-        labelName.classList.remove('errorLabel')
-        labelName.innerText = "Seu nome"
-        labelName.classList.add('correctValidation')
+        errorCorrected(regName, labelName, "Nome validado")
+        
     }
-}
-
-regName.onblur = function() {
-    nameVerification(regName.value)
-    
-}
-regEmail.onblur = function() {
-    emailVerification(regEmail.value)
 }
 
 
@@ -160,29 +182,80 @@ function emailVerification(email) {
     
     // error message construction
     if (email === "") {
-        //add HTMLclass changing form style
-        regEmail.classList.add('errorInput')
-        labelEmail.classList.add('errorLabel')
-        labelEmail.innerText = "Erro: e-mail é um campo obrigatório."
+        
+        errorFound(regEmail, labelEmail, "Erro: e-mail é um campo obrigatório.")
+        
 
     } else if (email_space != 0 || user_email === 0 || dom_email.includes("@") === false || dom_email.length <= 1 || DotCom_email === "" || DotCom_email.length <= 1) { 
-        regEmail.classList.add('errorInput')
-        labelEmail.classList.add('errorLabel')
-        labelEmail.innerHTML = "Erro: por gentileza, verifique o e-mail."
-
-            
+        
+        errorFound(regEmail, labelEmail, "Erro: por gentileza, verifique o e-mail.")
+                  
     } else {
-            regEmail.classList.remove('errorInput')
-            labelEmail.classList.remove('errorLabel')
-            labelEmail.innerText = "E-mail"
-            labelEmail.classList.add('correctValidation')
+        
+        errorCorrected(regEmail, labelEmail, "E-mail validado")
+        
+    }
+    
+}
+
+function cpfVerification(cpf) {
+    
+    //to a valid cpf, the first 9 digits
+
+    //first verification
+    var sum9_first_digits = 0
+    var sum10_first_digits = 0
+    var count = 10
+    var count2 = 11
+    var firstDigitTest = 0
+    var secondDigitTest = 0
+    // removing "-" and "."
+    for (num in cpf) {
+        if (cpf[num] == ".") {
+            cpf = cpf.replace(cpf[num], "")
         }
+        if (cpf[num] == "-") {
+            cpf = cpf.replace(cpf[num], "")
+        }
+
+    }
     
+    // verifying cpf's lenght 
+    if (cpf.length != 11) {
+        // call error function
+        errorFound(regCpf, labelCpf, "ERRO: CPF precisa conter 11 dígitos.")
+    } else {
 
-    
+        for (i = 0; i <= 8; i++) {
+            
+            sum9_first_digits += parseFloat(cpf[i] * count)
+            count--
+            
+        }
+        
+        for (i = 0; i <= 9; i++) {
+            sum10_first_digits += cpf[i] * count2
+            count2--
+            
+        }
+        
+        firstDigitTest = (sum9_first_digits * 10) % 11
+        secondDigitTest = (sum10_first_digits * 10) % 11
+        
+        if (firstDigitTest == 10) {
+            firstDigitTest = 0
+        }
+        
+        if (firstDigitTest == cpf[9] & secondDigitTest == cpf[10]) {
+            errorCorrected(regCpf, labelCpf, "CPF validado")
+        } else {
+            errorFound(regCpf, labelCpf, "ERRO: CPF inválido, por gentileza, verificar.")
+        }       
+    }
+}
 
-    console.log(user_email+dom_email+DotCom_email)
-
+function genderVerification() {
+   console.log('Testing onclick radio')
 }
 //---------------------------------
 

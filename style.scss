@@ -140,6 +140,11 @@ body {
                     border: 3px solid red;
                     color: red;
                 }
+                .box_check_error{
+                    width: 210px;
+                    border: 2px solid red;
+                    border-radius: 4px;
+                }
                 .man, .woman {
                     margin-right: 20px;
                     
@@ -166,6 +171,7 @@ body {
                     box-sizing: border-box; //para as bordas crescerem para dentro
                     border: 6px solid var(--secondColor);
                 }
+
             }
             .buttonSubmit {
                 background-color: var(--firstColor);

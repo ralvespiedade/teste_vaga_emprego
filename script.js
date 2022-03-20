@@ -67,7 +67,7 @@ regCpf.onblur = function() {
     cpfVerification(regCpf.value)
 }
 
-regGender.onclick = function() {
+regButton.onclick = function() {
     genderVerification()
 }
 
@@ -255,7 +255,26 @@ function cpfVerification(cpf) {
 }
 
 function genderVerification() {
-   console.log('Testing onclick radio')
+    
+    var checkedVerifier = 0
+   
+    regGender.forEach((i) => {
+        if (i.checked == true) {
+            checkedVerifier = 1
+            
+
+        }    
+   })
+
+    if (checkedVerifier === 1) {
+        console.log(`CheckedVerifier = true`)
+        boxCheck.classList.remove('.box_check_error')
+    } else {
+        boxCheck.classList.add('.box_check_error')
+        
+    }
+   
+    
 }
 //---------------------------------
 

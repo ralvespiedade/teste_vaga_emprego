@@ -176,6 +176,12 @@ body .section1 .rightSide form .errorInput {
   color: red;
 }
 
+body .section1 .rightSide form .box_check_error {
+  width: 210px;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+
 body .section1 .rightSide form .man, body .section1 .rightSide form .woman {
   margin-right: 20px;
 }
